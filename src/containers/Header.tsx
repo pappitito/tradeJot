@@ -1,4 +1,4 @@
-import { collapseSidebar, isDarkMode, myTab, toggleDarkMode, toggleMobileSidebar } from '@/redux/themeSlice'
+import { collapseSidebar, isDarkMode, myTab, setCurrentTab, toggleDarkMode, toggleMobileSidebar } from '@/redux/themeSlice'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { lightMode, darkMode } from '@/shared/themeColors'
@@ -44,7 +44,7 @@ const Header = () => {
             }} className={`${textColor} ${hover} p-[0.35rem] hidden xs:flex items-center cursor-pointer justify-center  rounded-[50%] ${bgCard}`}>{themeDarkMode? 
           <LightModeIcon className='text-center ' /> : 
           <DarkModeIcon className='text-center'/> }</button>
-          <div className='w-[6rem]'><Button text='Add Entry' /></div>
+          <div className='w-[6rem]'><Button onClick={()=>dispatch(setCurrentTab('new entry'))} text='Add Entry' /></div>
           <Avatar />
         
             

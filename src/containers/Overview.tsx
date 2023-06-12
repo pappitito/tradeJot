@@ -10,7 +10,7 @@ const Overview = () => {
   const {textColor} = themeDarkMode? darkMode: lightMode
 
   return (
-    <div className={`w-[100%] h-[100%] flex flex-row  ${textColor}  items-center justify-center `}>Overview</div>
+    <div className={`w-[100%]  flex flex-row  ${textColor}  items-center justify-center  `}>Overview</div>
   )
 }
 

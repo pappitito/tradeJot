@@ -14,7 +14,7 @@ export const themeSlice = createSlice({
             state.darkMode = !state.darkMode
         },
         setCurrentTab: (state, action) =>{
-            state.currentTab = action.payload.name
+            state.currentTab = action.payload
         },
         collapseSidebar: (state) =>{
             state.sidebarCollapsed = !state.sidebarCollapsed

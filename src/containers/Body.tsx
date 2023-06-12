@@ -5,6 +5,7 @@ import Overview from './Overview'
 import History from './History'
 import Strategy from './Strategy'
 import Tools from './Tools'
+import Entry from './Entry'
 
 const Body = () => {
     const currentTab = useSelector(myTab)
@@ -23,6 +24,9 @@ const Body = () => {
             case 'tools':
                 return <Tools />
                 break;
+            case 'new entry':
+                return <Entry />
+                 break;
             default:
                 return <Overview />
                 break;

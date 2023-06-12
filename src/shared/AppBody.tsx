@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { BodyElement } from "./typing";
 import React from 'react'
-import { setCurrentTab } from "@/redux/themeSlice";
+import { setCurrentTab, toggleMobileSidebar } from "@/redux/themeSlice";
 import HomeIcon from '@mui/icons-material/Home';
 import HistoryIcon from '@mui/icons-material/History';
 
@@ -12,12 +12,11 @@ const AppBody = () =>{
     const dispatch = useDispatch()
 
     const handleClick = (tabName: string) =>{
-        const payload = {
-            name: tabName
-        }
+       
         
         
-        dispatch(setCurrentTab(payload))
+        dispatch(setCurrentTab(tabName))
+        dispatch(toggleMobileSidebar())
     }
     
     const appBodies : BodyElement[] = [
