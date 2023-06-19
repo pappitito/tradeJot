@@ -4,6 +4,8 @@ import React from 'react'
 import { setCurrentTab, toggleMobileSidebar } from "@/redux/themeSlice";
 import HomeIcon from '@mui/icons-material/Home';
 import HistoryIcon from '@mui/icons-material/History';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import LightbulbCircleIcon from '@mui/icons-material/LightbulbCircle';
 
 
 
@@ -41,7 +43,7 @@ const AppBody = () =>{
         {
             key: 3,
             name: 'my strategy',
-            icon: <HistoryIcon/>,
+            icon: <LightbulbCircleIcon/>,
             onClick: ()=> handleClick('my strategy')
             
 
@@ -50,7 +52,7 @@ const AppBody = () =>{
         {
             key: 4,
             name: 'tools',
-            icon: <HistoryIcon/>,
+            icon: <ConstructionIcon/>,
             onClick: ()=> handleClick('tools')
             
 

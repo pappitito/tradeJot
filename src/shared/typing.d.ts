@@ -10,3 +10,9 @@ export interface BodyElement  {
     onClick: ()=> void,
     
 }
+export interface dataType {
+    ticker: string
+    duration?: number
+    pips: number
+    riskReward: number
+  }

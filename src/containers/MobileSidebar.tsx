@@ -40,7 +40,7 @@ const MobileSidebar = () => {
           }
         }
         return(
-          <div onClick={onClick} className={`flex flex-row  ${textColor} ${addHighlight()} gap-2 w-[100%] items-center ${collapsed? 'pl-4 pr-4' : 'pl-8 pr-8'} p-[0.95rem] rounded-[0.7rem] ${hover} cursor-pointer text-left`}>
+          <div onClick={onClick} className={`flex flex-row  ${textColor} ${addHighlight()} gap-2 w-[100%] items-center ${collapsed? 'pl-4 pr-4' : 'pl-8 pr-8'} p-[0.95rem] rounded-[0.7rem] md:${hover} cursor-pointer text-left`}>
             <div>{icon}</div>
             {showName && name && <div className={`${textColor}] `}>{camelCase(name)}</div>}
     
@@ -48,9 +48,9 @@ const MobileSidebar = () => {
         )
       }
   return (
-    <div className={`flex  md:hidden  ${themeDarkMode? '': 'myshadow'}  ${bgCard} min-w-[100%]  xs:min-w-[40%] items-center p-4 fixed top-0 left-0 z-[100]  h-[100vh] flex-col gap-[1rem]`}>
+    <div className={`flex  md:hidden  ${themeDarkMode? '': 'myshadow'} overflow-auto ${bgCard} min-w-[100%]  xs:min-w-[40%] items-center p-4 fixed top-0 left-0 z-[100]  h-[100vh] flex-col gap-[1rem]`}>
         <div className='mb-[2rem] mt-1 w-[100%] flex justify-between items-center'>
-            <img src='/assets/logo.svg' /> 
+            <img className='ml-[0.8rem]' src='/assets/logo.svg' /> 
             <div className='flex gap-5 items-center'>
                     <button onClick={()=>{
                     dispatch(toggleDarkMode())

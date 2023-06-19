@@ -24,7 +24,7 @@ const Header = () => {
    
 
   return (
-    <div className={`flex  flex-row   sticky items-center ${textColor} justify-between w-[100%] pl-2 pr-2  p-3 xs:pl-4 xs:pr-4`}>
+    <div className={`flex  flex-row   sticky top-0 items-center ${textColor} ${bgColor} justify-between w-[100%] pl-2 pr-2  p-3 xs:pl-4 xs:pr-4`}>
         <div className='flex flex-row items-center'>
           <div onClick={()=>{
             dispatch(collapseSidebar())
