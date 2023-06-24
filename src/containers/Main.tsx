@@ -27,7 +27,7 @@ const Main = () => {
         <div className='flex flex-row w-[100%]'>
           {isMobile && <MobileSidebar/>}
           <Sidebar />
-          <div className='w-[100%]'>
+          <div className='w-[100%] overflow-auto'>
             <Header/>
             <Body />
           </div>

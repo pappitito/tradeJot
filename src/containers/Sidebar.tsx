@@ -55,7 +55,7 @@ const Sidebar =  () => {
   )
 
   const collapsedSidebar = (
-    <div className={`hidden md:flex  ${themeDarkMode? '': 'myshadow'}  ${bgCard}  z-[100] min-w-[3rem] items-center p-3 sticky top-0 left-0  h-[100vh] flex-col gap-[1rem]`}>
+    <div className={`hidden md:flex  ${themeDarkMode? '': 'myshadow'}  ${bgCard}  z-[100] min-w-[4.8rem] items-center p-3 sticky top-0 left-0  h-[100vh] flex-col gap-[1rem]`}>
     <div className='mb-[2rem] mt-[0.3rem]'><img src='/logoShort.svg' /></div>
     {appBodies.map((option)=>(
       <Option key={option.key} onClick={option.onClick} icon={option.icon} name={option.name} collapsed />

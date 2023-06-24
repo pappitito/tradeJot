@@ -15,7 +15,7 @@ const Body = () => {
             case 'overview':
                 return <Overview/>
                 break;
-            case 'trade history':
+            case 'history':
                 return <History/>
                 break;
             case 'my strategy':

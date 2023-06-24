@@ -13,6 +13,13 @@ export interface BodyElement  {
 export interface dataType {
     ticker: string
     duration?: number
+    criteria?: string,
     pips: number
+    stopLoss?: number,
+    takeProfit?: number,
+    lots?: number
     riskReward: number
+    profit?: number,
+    currency?: string
+
   }

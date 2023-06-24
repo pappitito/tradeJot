@@ -34,7 +34,7 @@ const Header = () => {
             
             dispatch(toggleMobileSidebar())
           }} className='flex md:hidden p-1 cursor-pointer'><MenuIcon /></div>
-          <div className={`ml-[1rem] text-[1.3rem] md:text-[1.6rem] `}>{camelCase(currentTab)}</div> 
+          <div className={`ml-[1rem] whitespace-pre text-[1.3rem] md:text-[1.6rem] `}>{camelCase(currentTab)}</div> 
           </div> 
         
         <div className='flex flex-row items-center gap-2 md:gap-5'>

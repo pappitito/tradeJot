@@ -8,56 +8,96 @@ import Instrument from '@/components/overview/Instrument'
 import StatusCheck from '@/components/overview/StatusCheck'
 import Tracker from '@/components/overview/Tracker'
 
+export const data : dataType[] = [
+  {
+    ticker: 'eurusd',
+    duration: 2,
+    pips: +43,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    criteria: `Break of trend line and retest, seeing candlestick confirmation on the 15mins TF `,
+    riskReward: 2.84,
+    profit: 24,
+    currency: '$'
+  },
+  {
+    ticker: 'gbpusd',
+    duration: 2,
+    pips: -16.4,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    criteria: `Break of trend line and retest, seeing candlestick confirmation on the 15mins TF `,
+    riskReward: 2.48,
+    profit: 24,
+    currency: '$'
+  },
+  {
+    ticker: 'gbpusd',
+    duration: 2,
+    pips: 66.4,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    criteria: `Break of trend line and retest, seeing candlestick confirmation on the 15mins TF `,
+    riskReward: 2.48,
+    profit: 24,
+    currency: '$'
+  },
+  {
+    ticker: 'USDCAD',
+    duration: 2,
+    pips: 0,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    criteria: `Break of trend line and retest, seeing candlestick confirmation on the 15mins TF `,
+    riskReward: 2.48,
+    profit: 24,
+    currency: '$'
+  },
+  {
+    ticker: 'USDCAD',
+    duration: 2,
+    pips: 50,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    criteria: `Break of trend line  `,
+    riskReward: 2.48,
+    profit: 24,
+    currency: '$'
+  },
+  {
+    ticker: 'USDCAD',
+    duration: 2,
+    pips: 50,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    riskReward: 2.48,
+    profit: 24,
+    currency: '$'
+  },
 
+  {
+    ticker: 'USDJPY',
+    duration: 2,
+    pips: 46,
+    stopLoss: 0.9845,
+    takeProfit: 0.9745,
+    lots: 0.86,
+    riskReward: 2.48,
+    profit: 24,
+    currency: '$'
+  } ]
 
 const Overview = () => {
   const themeDarkMode = useSelector(isDarkMode)
   const {textColor, bgCard, bgColor} = themeDarkMode? darkMode: lightMode
 
-  const data : dataType[] = [
-    {
-      ticker: 'eurusd',
-      duration: 2,
-      pips: +43,
-      riskReward: 2.84
-    },
-    {
-      ticker: 'gbpusd',
-      duration: 2,
-      pips: -16.4,
-      riskReward: 2.48
-    },
-    {
-      ticker: 'gbpusd',
-      duration: 2,
-      pips: 66.4,
-      riskReward: 2.48
-    },
-    {
-      ticker: 'USDCAD',
-      duration: 2,
-      pips: 0,
-      riskReward: 2.48
-    },
-    {
-      ticker: 'USDCAD',
-      duration: 2,
-      pips: 50,
-      riskReward: 2.48
-    },
-    {
-      ticker: 'USDCAD',
-      duration: 2,
-      pips: 50,
-      riskReward: 2.48
-    },
-
-    {
-      ticker: 'USDJPY',
-      duration: 2,
-      pips: 46,
-      riskReward: 2.48
-    } ]
+ 
 
   interface OptionP {
     figure: string, 
