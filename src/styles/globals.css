@@ -13,3 +13,10 @@ main{
 body{
   background-color: black;
 }
+.boldspan > span {
+  font-weight: 600;
+  padding-left: 0.2rem;
+}
+.fweight6{
+  font-weight: 600;
+}

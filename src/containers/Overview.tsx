@@ -19,7 +19,8 @@ export const data : dataType[] = [
     criteria: `Break of trend line and retest, seeing candlestick confirmation on the 15mins TF `,
     riskReward: 2.84,
     profit: 24,
-    currency: '$'
+    currency: '$',
+    notes: 'this trade was taken with FOMO so do not do that again'
   },
   {
     ticker: 'gbpusd',

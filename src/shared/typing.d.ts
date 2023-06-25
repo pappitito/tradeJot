@@ -20,6 +20,7 @@ export interface dataType {
     lots?: number
     riskReward: number
     profit?: number,
-    currency?: string
+    currency?: string,
+    notes?: string
 
   }
