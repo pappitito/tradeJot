@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { data } from './Overview'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import EditIcon from '@mui/icons-material/Edit';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 
@@ -47,7 +48,13 @@ const History = () => {
         </div>
     )
     const full = (
-      <div className={`w-[100%] border-t-[1px] ${borderT} p-3 flex flex-col`}>
+      <AnimatePresence>
+        <motion.div className={`w-[100%] border-t-[1px] ${borderT} p-3 flex flex-col`}
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: 'auto', opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ duration: 0.2, ease: 'easeInOut' }}
+        >
         <div className='flex justify-between'>
           <div className='flex items-center gap-3'>
           {(pips > 0)? <div className='min-w-[1.1rem] h-[0.5rem] rounded-[0.25rem] bg-[#4DCD4A]'></div> :
@@ -94,14 +101,15 @@ const History = () => {
         <div className='flex-col flex'>
 
         </div>
-      </div>
+      </motion.div>
+      </AnimatePresence>
     )
     return expanded? full : collapsed
   }
   const MyTable = ()=>{
 
     return(
-      <div className={`flex flex-col h-[100%] text-center text-[1.1rem]  min-h-[43rem] w-[100%] min-w-[2rem] ${bgCard} max-w-[80rem] rounded-[1.8rem]`}>
+      <div className={`flex flex-col  text-center text-[1.1rem]  min-h-[43rem] w-[100%] min-w-[2rem] ${bgCard} max-w-[80rem] rounded-[1.8rem]`}>
         <div className={`flex p-3 justify-between  pt-4   w-full`}>
           <div className='flex flex-row w-full xs:max-w-[80%] mlg:max-w-[40%] xsm:max-w-[60%]'>
             <div className=' w-full max-w-[30%] '>Ticker</div>

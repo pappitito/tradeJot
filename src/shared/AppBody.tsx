@@ -33,7 +33,7 @@ const AppBody = () =>{
         },
         {
             key: 2,
-            name: 'trade history',
+            name: 'history',
             icon: <HistoryIcon/>,
             onClick: ()=> handleClick('history')
             

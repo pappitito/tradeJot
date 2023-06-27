@@ -6,6 +6,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useDispatch, useSelector } from 'react-redux'
 import CloseIcon from '@mui/icons-material/Close';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 
@@ -48,7 +49,13 @@ const MobileSidebar = () => {
         )
       }
   return (
-    <div className={`flex  md:hidden  ${themeDarkMode? '': 'myshadow'} overflow-auto ${bgCard} min-w-[100%]  xs:min-w-[40%] items-center p-4 fixed top-0 left-0 z-[100]  h-[100vh] flex-col gap-[1rem]`}>
+    <AnimatePresence>
+      <motion.div
+            className={`flex  md:hidden  ${themeDarkMode? '': 'myshadow'}  duration-500 ease-in-out overflow-auto ${bgCard} min-w-[100%]  xs:min-w-[40%] items-center p-4 fixed top-0 left-0 z-[100]  h-[100vh] flex-col gap-[1rem]`}
+            initial={{ x: '-120%' }}
+            animate={{ x: '0%' }}
+            exit={{ x: '-120%' }}
+            transition={{ duration: 0.05, ease: 'easeInOut' }}>
         <div className='mb-[2rem] mt-1 w-[100%] flex justify-between items-center'>
             <img className='ml-[0.8rem]' src='/assets/logo.svg' /> 
             <div className='flex gap-5 items-center'>
@@ -67,7 +74,9 @@ const MobileSidebar = () => {
         {appBodies.map((option)=>(
           <Option key={option.key} onClick={option.onClick} icon={option.icon} name={option.name} showName />
         ))}
-      </div>
+      
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
