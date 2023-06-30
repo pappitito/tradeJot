@@ -17,17 +17,14 @@ const Main = () => {
     
     
 
-     useEffect(()=>{
-        console.log(bgColor);
-        
-    },[]) 
+    
 
   return (
-    <div className={`${bgColor}   `}>
+    <div className={`${bgColor} w-full h-full `}>
         <div className='flex flex-row w-[100%]'>
           {isMobile && <MobileSidebar/>}
           <Sidebar />
-          <div className='w-[100%] overflow-auto'>
+          <div className='w-[100%] m-0  md:overflow-x-auto '>
             <Header/>
             <Body />
           </div>

@@ -1,7 +1,7 @@
 import { isDarkMode } from '@/redux/themeSlice'
 import { darkMode, lightMode } from '@/shared/themeColors'
 import { dataType } from '@/shared/typing'
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { data } from './Overview'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -19,6 +19,7 @@ const History = () => {
 
   const DataRow = ({ pips, ticker, riskReward, criteria, duration, stopLoss, takeProfit, lots, profit, notes, currency }: dataType) =>{
     const [expanded, setExpanded] = useState(false)
+    const memoizedExpanded = useMemo(() => expanded, [expanded]);
     const collapsed = (
       <div className={`flex p-2 pl-3 pr-3 gap-1 text-[1rem]  justify-between  items-center border-t-[1px] ${borderT} w-full`}>
           <div className='flex flex-row w-full gap-2 xs:max-w-[80%] mlg:max-w-[40%] xsm:max-w-[60%]'>
@@ -104,7 +105,7 @@ const History = () => {
       </motion.div>
       </AnimatePresence>
     )
-    return expanded? full : collapsed
+    return memoizedExpanded? full : collapsed
   }
   const MyTable = ()=>{
 
@@ -136,7 +137,7 @@ const History = () => {
 
 
   return (
-    <div className={`w-[100%]   p-4 flex justify-center ${textColor}`}>
+    <div className={`w-[100%] ${bgColor} pb-10 flex-grow  p-4 flex justify-center ${textColor}`}>
       <MyTable/>
     </div>
   )

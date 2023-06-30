@@ -34,7 +34,7 @@ const Body = () => {
     }
    
   return(
-    <div className='h-[100vh] md:h-auto'>{passTab()}</div>
+    <div className='h-auto  md:h-auto'>{passTab()}</div>
   )
 }
 
